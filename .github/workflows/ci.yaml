@@ -13,12 +13,18 @@ jobs:
     if: ${{ !github.event.created && github.repository != 'garronej/ts-ci' }}
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ inputs.pnpm-version }}
       - uses: actions/setup-node@v3
-      - uses: bahmutov/npm-install@v1
-      - name: If this step fails run 'yarn lint' and 'yarn format' then commit again.
+        with:
+          node-version: ${{ inputs.node-version }}
+          registry-url: ${{ inputs.registry-url }}
+          cache: "pnpm"
+      - name: If this step fails run 'pnpm run lint' and 'pnpm run format' then commit again.
         run: |
-          yarn lint:check
-          yarn format:check
+          pnpm run lint:check
+          pnpm run format:check
   test:
     runs-on: ${{ matrix.os }}
     needs: test_lint
@@ -32,9 +38,16 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - uses: bahmutov/npm-install@v1
-      - run: yarn build
-      - run: yarn test
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ inputs.pnpm-version }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node-version }}
+          registry-url: ${{ inputs.registry-url }}
+          cache: "pnpm"
+      - run: pnpm run build
+      - run: pnpm run test
 
   check_if_version_upgraded:
     name: Check if version upgrade
@@ -96,8 +109,15 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           registry-url: https://registry.npmjs.org/
-      - uses: bahmutov/npm-install@v1
-      - run: yarn build
+      - uses: pnpm/action-setup@v2
+        with:
+          version: ${{ inputs.pnpm-version }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ inputs.node-version }}
+          registry-url: ${{ inputs.registry-url }}
+          cache: "pnpm"
+      - run: pnpm run build
       - run: npx -y -p denoify@1.5.7 enable_short_npm_import_path
         env:
           DRY_RUN: "0"
@@ -106,7 +126,7 @@ jobs:
           action_name: remove_dark_mode_specific_images_from_readme
       - name: Publishing on NPM
         run: |
-          if [ "$(npm show . version)" = "$VERSION" ]; then
+          if [ "$(pnpm show . version)" = "$VERSION" ]; then
             echo "This version is already published"
             exit 0
           fi
@@ -118,7 +138,7 @@ jobs:
           if [ "$IS_PRE_RELEASE" = "true" ]; then
               EXTRA_ARGS="--tag next"
           fi
-          npm publish $EXTRA_ARGS
+          pnpm publish $EXTRA_ARGS
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           VERSION: ${{ needs.check_if_version_upgraded.outputs.to_version }}
