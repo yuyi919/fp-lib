@@ -1,10 +1,10 @@
 {
-    "name": "#{REPO_NAME}#",
+    "name": "fp-lib",
     "version": "0.0.0",
-    "description": "#{DESC}#",
+    "description": "",
     "repository": {
         "type": "git",
-        "url": "git://github.com/#{USER_OR_ORG}#/#{REPO_NAME}#.git"
+        "url": "git://github.com/yuyi919/fp-lib.git"
     },
     "scripts": {
         "build": "tsc",
@@ -36,7 +36,7 @@
             "pre-commit": "lint-staged -v"
         }
     },
-    "author": "u/#{USER_OR_ORG}#",
+    "author": "u/yuyi919",
     "license": "MIT",
     "files": [
         "src/",
@@ -44,7 +44,7 @@
         "!dist/tsconfig.tsbuildinfo"
     ],
     "keywords": [],
-    "homepage": "https://github.com/#{USER_OR_ORG}#/#{REPO_NAME}#",
+    "homepage": "https://github.com/yuyi919/fp-lib",
     "devDependencies": {
         "@types/node": "^20.2.1",
         "typescript": "^5.0.4",
