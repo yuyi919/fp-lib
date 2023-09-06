@@ -1,4 +1,18 @@
 name: ci
+inputs:
+  node-version:
+    required: true
+    default: 16
+  registry-url:
+    required: true
+    default: "https://registry.npmjs.org"
+  pnpm-version:
+    required: true
+    default: 7
+  run-install:
+    required: true
+    default: true
+
 on:
   push:
     branches:
