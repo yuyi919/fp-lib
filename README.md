@@ -31,15 +31,13 @@ $ npm install --save fp-lib
 ```
 
 ```typescript
-import { myFunction, myObject, MyReactComponent } from "fp-lib";
+
 ```
 
 Specific imports, only import what you need:
 
 ```typescript
-import { myFunction } from "fp-lib/myFunction";
-import { myObject } from "fp-lib/myObject";
-import MyReactComponent from "fp-lib/MyReactComponent";
+
 ```
 
 # Contributing
