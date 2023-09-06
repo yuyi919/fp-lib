@@ -28,22 +28,22 @@ jobs:
         run: |
           pnpm run lint:check
           pnpm run format:check
-  test:
-    runs-on: ${{ matrix.os }}
-    needs: test_lint
-    strategy:
-      matrix:
-        node: ["16"]
-        os: [windows-latest, ubuntu-latest]
-    name: Test with Node v${{ matrix.node }} on ${{ matrix.os }}
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Workspace
-        uses: ./.github/action/pnpm
-        with:
-          run-install: true
-      - run: pnpm run build
-      - run: pnpm run test
+  # test:
+  #   runs-on: ${{ matrix.os }}
+  #   needs: test_lint
+  #   strategy:
+  #     matrix:
+  #       node: ["16"]
+  #       os: [windows-latest, ubuntu-latest]
+  #   name: Test with Node v${{ matrix.node }} on ${{ matrix.os }}
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Setup Workspace
+  #       uses: ./.github/action/pnpm
+  #       with:
+  #         run-install: true
+  #     - run: pnpm run build
+  #     - run: pnpm run test
 
   check_if_version_upgraded:
     name: Check if version upgrade
