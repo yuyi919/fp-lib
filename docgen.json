@@ -1,23 +1,11 @@
 {
   "enforceVersion": false,
   "parseCompilerOptions": {
-    "module": "es2020",
-    "target": "es2020",
-    "moduleResolution": "Bundler",
-    "lib": ["es6", "DOM", "ESNext"],
-    "esModuleInterop": true,
-    "declaration": true,
-    "outDir": "./dist",
-    "sourceMap": true,
-    "newLine": "LF",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "incremental": true,
     "strict": true,
-    "downlevelIteration": true,
-    "jsx": "react-jsx",
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true
+    "noEmit": false,
+    "target": "ES2021",
+    "lib": ["ES2021"],
+    "paths": {}
   },
   "examplesCompilerOptions": {
     "strict": true,
