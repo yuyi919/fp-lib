@@ -1,6 +1,6 @@
 {
   "name": "@yuyi919/fp-lib",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/yuyi919/fp-lib",
@@ -20,17 +20,19 @@
   "files": [
     "src/",
     "dist/",
-    "!dist/tsconfig.tsbuildinfo"
+    "!dist/tsconfig.tsbuildinfo",
+    "!**/*.spec.*"
   ],
   "scripts": {
     "_format": "prettier '**/*.{ts,tsx,json,md}'",
-    "build": "tsc",
+    "build": "tsc && docgen",
     "format": "npm run _format -- --write",
     "format:check": "npm run _format -- --list-different",
     "link-in-app": "ts-node --skipProject scripts/link-in-app.ts",
     "lint": "npm run lint:check -- --fix",
     "lint:check": "eslint . --ext .ts,.tsx",
-    "test": "vitest"
+    "test": "vitest",
+    "test:dev": "vitest --watch"
   },
   "husky": {
     "hooks": {
@@ -46,6 +48,7 @@
     ]
   },
   "dependencies": {
+    "@effect/docgen": "^0.1.4",
     "fp-ts": "^2.16.1"
   },
   "devDependencies": {
