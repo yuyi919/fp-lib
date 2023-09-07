@@ -26,6 +26,7 @@
   "scripts": {
     "_format": "prettier '**/*.{ts,tsx,json,md}'",
     "build": "tsc && docgen",
+    "docs-update": "git add --force --all docs/modules || true",
     "format": "npm run _format -- --write",
     "format:check": "npm run _format -- --list-different",
     "link-in-app": "ts-node --skipProject scripts/link-in-app.ts",
