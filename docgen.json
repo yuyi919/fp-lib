@@ -24,7 +24,6 @@
     "noEmit": false,
     "target": "ES2021",
     "lib": ["ES2021"],
-    "paths": {
-    }
+    "paths": {}
   }
 }

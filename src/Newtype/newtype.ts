@@ -243,16 +243,18 @@ export function guard<URI extends Newtypes.TypeURIS, T>(
 /**
  * @since 0.2.0
  */
-export interface Concat<
+export type Concat<
   N1 extends Newtype<object, any>,
   N2 extends Newtype<object, CarrierOf<N1>>,
-> extends Newtype<URIOf<N1> & URIOf<N2>, CarrierOf<N1>> {}
+> = Newtype<URIOf<N1> & URIOf<N2>, CarrierOf<N1>>;
 
 /**
  * @since 0.2.0
  */
-export interface Extends<N extends AnyNewtype, Tags extends object>
-  extends Newtype<Tags & URIOf<N>, CarrierOf<N>> {}
+export type Extends<N extends AnyNewtype, Tags extends object> = Newtype<
+  Tags & URIOf<N>,
+  CarrierOf<N>
+>;
 
 // /**
 //  * @since 0.2.0

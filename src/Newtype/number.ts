@@ -66,12 +66,18 @@ declare global {
   }
 }
 
-export interface Integer<T extends number = number>
-  extends newtype.Newtype<{ readonly Integer: unique symbol }, T> {}
-export interface Positive<T extends number = number>
-  extends newtype.Newtype<{ readonly Positive: unique symbol }, T> {}
-export interface PositiveInteger<T extends number = number>
-  extends newtype.Concat<Integer<T>, Positive<T>> {}
+export type Integer<T extends number = number> = newtype.Newtype<
+  { readonly Integer: unique symbol },
+  T
+>;
+export type Positive<T extends number = number> = newtype.Newtype<
+  { readonly Positive: unique symbol },
+  T
+>;
+export type PositiveInteger<T extends number = number> = newtype.Concat<
+  Integer<T>,
+  Positive<T>
+>;
 
 /**
  * @since 0.2.0
