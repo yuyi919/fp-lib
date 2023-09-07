@@ -33,8 +33,7 @@
     "lint": "npm run lint:check -- --fix",
     "lint:check": "eslint . --ext .ts,.tsx",
     "test": "vitest",
-    "test:dev": "vitest --watch",
-    "docs-update": "git add --force --all docs/modules || true"
+    "test:dev": "vitest --watch"
   },
   "husky": {
     "hooks": {
