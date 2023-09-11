@@ -1,9 +1,11 @@
-remote_theme: pmarsceill/just-the-docs
+remote_theme: jekyll-theme-rtd
 
 # Enable or disable the site search
 search_enabled: true
-
+title: '@yuyi919/fp-lib'
+description: a fp-ts lib
 # Aux links for the upper right navigation
-aux_links:
-'@yuyi919/fp-lib on GitHub':
-  - 'https://github.com/yuyi919/fp-lib'
+site_author: YUI919
+repo_url: 'https://github.com/yuyi919/fp-lib'
+edit_on_github: true
+github_docs_folder: true
