@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---

@@ -2,6 +2,7 @@
 title: tools/index.ts
 nav_order: 13
 parent: Modules
+layout: default
 ---
 
 ## index overview

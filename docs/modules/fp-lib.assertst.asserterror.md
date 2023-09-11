@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -21,4 +21,3 @@ export declare class AssertError extends Error
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
 |  [(constructor)(msg)](./fp-lib.assertst.asserterror._constructor_.md) |  | Constructs a new instance of the <code>AssertError</code> class |
-

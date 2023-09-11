@@ -2,6 +2,7 @@
 title: Newtype/newtype.ts
 nav_order: 6
 parent: Modules
+layout: default
 ---
 
 ## newtype overview

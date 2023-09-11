@@ -2,6 +2,7 @@
 title: index.ts
 nav_order: 2
 parent: Modules
+layout: default
 ---
 
 ## index overview

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,4 +25,3 @@ export declare function getAsserts<M extends URIS2, A>(isMatched: Predicate<A>, 
 **Returns:**
 
 [AssertsT2](./fp-lib.assertst.assertst2.md)<!-- -->&lt;M&gt;
-

@@ -2,6 +2,7 @@
 title: LiftFC.ts
 nav_order: 3
 parent: Modules
+layout: default
 ---
 
 ## LiftFC overview

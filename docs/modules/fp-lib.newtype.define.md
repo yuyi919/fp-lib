@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,4 +25,3 @@ export declare function define<URI extends Newtypes.TypeURIS, T>(guard: Newtypes
 **Returns:**
 
 [INewtypeURI](./fp-lib.newtype.inewtypeuri.md)<!-- -->&lt;URI, Newtypes.Kind&lt;URI, T&gt;, [CarrierOf](./fp-lib.newtype.carrierof.md)<!-- -->&lt;Newtypes.Kind&lt;URI, T&gt;&gt;&gt;
-

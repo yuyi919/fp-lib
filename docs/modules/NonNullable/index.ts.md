@@ -2,6 +2,7 @@
 title: NonNullable/index.ts
 nav_order: 11
 parent: Modules
+layout: default
 ---
 
 ## index overview

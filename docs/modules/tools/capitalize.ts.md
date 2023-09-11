@@ -2,6 +2,7 @@
 title: tools/capitalize.ts
 nav_order: 12
 parent: Modules
+layout: default
 ---
 
 ## capitalize overview

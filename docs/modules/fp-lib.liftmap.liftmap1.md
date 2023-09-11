@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,4 +25,3 @@ export interface LiftMap1<URI extends URIS> extends Functor.Functor1<URI>
 |  [liftMap(fa, fb, fc, fd, f)](./fp-lib.liftmap.liftmap1.liftmap_2.md) |  |
 |  [liftMap(fa, fb, fc, fd, fe, f)](./fp-lib.liftmap.liftmap1.liftmap_3.md) |  |
 |  [liftMap(fa, fb, fc, fd, fe, ff, f)](./fp-lib.liftmap.liftmap1.liftmap_4.md) |  |
-

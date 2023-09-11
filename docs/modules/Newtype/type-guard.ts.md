@@ -2,6 +2,7 @@
 title: Newtype/type-guard.ts
 nav_order: 9
 parent: Modules
+layout: default
 ---
 
 ## type-guard overview

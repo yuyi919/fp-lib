@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -29,4 +29,3 @@ export interface INewtypeProto<S extends AnyNewtype, T extends CarrierOf<S>>
 |  --- | --- |
 |  [unsafe(a)](./fp-lib.newtype.inewtypeproto.unsafe.md) |  |
 |  [unwrap(a)](./fp-lib.newtype.inewtypeproto.unwrap.md) |  |
-

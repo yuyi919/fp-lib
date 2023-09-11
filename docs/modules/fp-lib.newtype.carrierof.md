@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -15,4 +15,3 @@ improve_this_button: false
 export type CarrierOf<N extends AnyNewtype> = N extends INewtype<any, infer A> ? A : never;
 ```
 **References:** [AnyNewtype](./fp-lib.newtype.anynewtype.md)<!-- -->, [INewtype](./fp-lib.newtype.inewtype.md)
-

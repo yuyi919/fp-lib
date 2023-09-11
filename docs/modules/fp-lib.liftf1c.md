@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -28,4 +28,3 @@ improve_this_button: false
 |  Type Alias | Description |
 |  --- | --- |
 |  [Id](./fp-lib.liftf1c.id.md) |  |
-

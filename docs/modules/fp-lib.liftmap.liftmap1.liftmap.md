@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -26,4 +26,3 @@ liftMap<A, B, C>(fa: Kind<URI, A>, fb: Kind<URI, B>, f: (a: A, b: B) => C): Kind
 **Returns:**
 
 Kind&lt;URI, C&gt;
-

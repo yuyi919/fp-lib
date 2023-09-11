@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,4 +24,3 @@ liftF2<A extends T, B extends T, C extends T>(f: (a: A, b: B) => C): (a: HKT.HKT
 **Returns:**
 
 (a: HKT.HKT&lt;URI, A&gt;, b: HKT.HKT&lt;URI, B&gt;) =&gt; HKT.HKT&lt;URI, C&gt;
-

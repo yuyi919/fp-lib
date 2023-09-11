@@ -2,6 +2,7 @@
 title: Newtype/number.ts
 nav_order: 8
 parent: Modules
+layout: default
 ---
 
 ## number overview

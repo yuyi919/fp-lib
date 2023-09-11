@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -23,4 +23,3 @@ improve_this_button: false
 |  [return2](./fp-lib.tools.return2.md) |  |
 |  [return3](./fp-lib.tools.return3.md) |  |
 |  [return4](./fp-lib.tools.return4.md) |  |
-

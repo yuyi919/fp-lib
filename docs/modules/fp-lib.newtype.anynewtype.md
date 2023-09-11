@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -15,4 +15,3 @@ improve_this_button: false
 export type AnyNewtype = INewtype<any, any>;
 ```
 **References:** [INewtype](./fp-lib.newtype.inewtype.md)
-

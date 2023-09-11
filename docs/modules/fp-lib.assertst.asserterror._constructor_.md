@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -22,4 +22,3 @@ constructor(msg?: string);
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  msg | string | _(Optional)_ |
-
