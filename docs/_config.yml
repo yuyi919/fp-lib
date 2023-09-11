@@ -1,4 +1,4 @@
-remote_theme: jekyll-theme-rtd
+remote_theme: carlosperate/jekyll-theme-rtd
 
 # Enable or disable the site search
 search_enabled: true
