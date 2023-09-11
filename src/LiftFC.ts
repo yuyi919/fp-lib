@@ -1,5 +1,6 @@
 import * as HKT from "fp-ts/HKT";
 import * as Identity from "fp-ts/Identity";
+import { identity } from "fp-ts/function";
 import { MSeq } from "./LiftMap";
 
 export interface liftF1C<URI, T> {
@@ -47,8 +48,15 @@ export interface liftF11C<URI extends HKT.URIS, T> {
 
 export type Id = liftF11C<Identity.URI, any>;
 export const Id: Id = {
-  liftF1: Identity.of,
-  liftF2: Identity.of,
-  liftF3: Identity.of,
-  liftF4: Identity.of,
+  liftF1: identity,
+  liftF2: identity,
+  liftF3: identity,
+  liftF4: identity,
+};
+
+export const getPrediates: Id = {
+  liftF1: identity,
+  liftF2: identity,
+  liftF3: identity,
+  liftF4: identity,
 };

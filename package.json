@@ -11,12 +11,15 @@
   "license": "MIT",
   "author": "yuyi919",
   "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js",
-    "./tools": "./dist/tools/index.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "src/",
     "dist/",
@@ -25,15 +28,17 @@
   ],
   "scripts": {
     "_format": "prettier '**/*.{ts,tsx,json,md}'",
-    "build": "tsc && docgen",
+    "build": "unbuild && docgen",
     "docs-update": "git add --force --all docs/modules || true",
     "format": "npm run _format -- --write",
     "format:check": "npm run _format -- --list-different",
     "link-in-app": "ts-node --skipProject scripts/link-in-app.ts",
     "lint": "npm run lint:check -- --fix",
     "lint:check": "eslint . --ext .ts,.tsx",
+    "fix-dts": "ts-node --skipProject ./scripts/fix-dts.ts",
     "test": "vitest",
-    "test:dev": "vitest --watch"
+    "test:dev": "vitest --watch",
+    "doc": "api-documenter markdown -i ./temp -o ./docs/modules"
   },
   "husky": {
     "hooks": {
@@ -49,22 +54,26 @@
     ]
   },
   "dependencies": {
-    "@effect/docgen": "^0.1.4",
     "fp-ts": "^2.16.1"
   },
   "devDependencies": {
-    "@types/node": "^20.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.59.6",
-    "@typescript-eslint/parser": "^5.59.6",
-    "eslint": "^8.41.0",
-    "eslint-config-prettier": "^8.8.0",
+    "@effect/docgen": "^0.1.4",
+    "@microsoft/api-documenter": "^7.22.33",
+    "@microsoft/api-extractor": "^7.36.4",
+    "@rushstack/heft": "^0.58.2",
+    "@types/node": "^20.5.9",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.48.0",
+    "eslint-config-prettier": "^8.10.0",
     "husky": "^8.0.3",
-    "lint-staged": "^11.1.1",
-    "prettier": "^3.0.2",
-    "prettier-plugin-organize-imports": "^3.0.0",
-    "prettier-plugin-packagejson": "^2.2.18",
+    "lint-staged": "^11.2.6",
+    "prettier": "^3.0.3",
+    "prettier-plugin-organize-imports": "^3.2.3",
+    "prettier-plugin-packagejson": "^2.4.5",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
+    "unbuild": "^2.0.0",
     "vitest": "^0.31.4"
   },
   "publishConfig": {

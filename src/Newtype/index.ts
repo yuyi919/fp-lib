@@ -1,4 +1,6 @@
 export * from "./newtype";
+import "./type-guard";
+import "./util";
 
 declare module "fp-ts/HKT" {
   interface URItoKind<A> extends Newtypes.Types<A> {}

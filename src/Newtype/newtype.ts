@@ -17,30 +17,38 @@ import * as F from "fp-ts/function";
 import * as AssertsT from "../AssertsT";
 import * as liftF1C from "../LiftFC";
 
+export const newtypeId: unique symbol = Symbol.for("@yuyi919/newtype/id");
+
 /**
  * @since 0.2.0
  */
-export abstract class Newtype<URI, A> {
-  readonly _URI!: URI;
-  readonly _A!: A;
+export interface INewtype<URI, A> {
+  readonly [newtypeId]: typeof newtypeId;
+  readonly _URI: URI;
+  readonly _A: A;
 }
 
-/**
- * @since 0.2.0
- */
-export type AnyNewtype = Newtype<any, any>;
+export type Newtype<URI extends string, A = any> = INewtype<
+  { readonly [K in URI]: K },
+  A
+>;
 
 /**
  * @since 0.2.0
  */
-export type URIOf<N extends AnyNewtype> = N extends Newtype<infer URI, any>
+export type AnyNewtype = INewtype<any, any>;
+
+/**
+ * @since 0.2.0
+ */
+export type URIOf<N extends AnyNewtype> = N extends INewtype<infer URI, any>
   ? URI
   : never;
 
 /**
  * @since 0.2.0
  */
-export type CarrierOf<N extends AnyNewtype> = N extends Newtype<any, infer A>
+export type CarrierOf<N extends AnyNewtype> = N extends INewtype<any, infer A>
   ? A
   : never;
 
@@ -122,7 +130,7 @@ export interface INewtypeProto<S extends AnyNewtype, T extends CarrierOf<S>> {
   is: R.Refinement<any, S>;
 }
 
-export interface INewtype<S extends AnyNewtype, T extends CarrierOf<S>>
+export interface INewtypeClass<S extends AnyNewtype, T extends CarrierOf<S>>
   extends INewtypeProto<S, T> {
   /**
    * @param input -
@@ -202,56 +210,49 @@ const construct = (target: unknown) => Object.setPrototypeOf(target, __proto);
 /**
  * @since 0.2.0
  */
-export function newtype<URI extends Newtypes.TypeURIS, T>(
+export function define<URI extends Newtypes.TypeURIS, T>(
   guard: Newtypes.Guard<URI, T>["guard"],
   URI: Newtypes.Guard<URI, T>["URI"],
 ): INewtypeURI<URI, Newtypes.Kind<URI, T>, CarrierOf<Newtypes.Kind<URI, T>>>;
-export function newtype<
+export function define<S extends AnyNewtype>(
+  predicate: Predicate.Predicate<CarrierOf<S>>,
+  message?: string,
+): INewtypeClass<S, CarrierOf<S>>;
+export function define<
   S extends AnyNewtype,
   A extends CarrierOf<S> = CarrierOf<S>,
->(predicate: Predicate.Predicate<A>, message?: string): INewtype<S, A>;
-export function newtype<
-  S extends AnyNewtype,
-  A extends CarrierOf<S> = CarrierOf<S>,
->(predicate?: Predicate.Predicate<A>): INewtype<S, A>;
-export function newtype(
+>(predicate?: Predicate.Predicate<A>): INewtypeClass<S, A>;
+export function define(
   predicate?: any,
   msgOrURI = "newtype",
 ): INewtypeProto<any, any> {
-  function wrap(input: CarrierOf<any>, unsafeCoerce?: boolean): any {
+  const wrap = (input: CarrierOf<any>, unsafeCoerce?: boolean): any => {
     if (!unsafeCoerce && predicate && !predicate(input as any)) {
       throw new TypeError("Expected: " + msgOrURI, { cause: input });
     }
     return input as any;
-  }
+  };
   construct(wrap);
   wrap.msg = msgOrURI;
   if (predicate) {
     wrap.predicate = predicate;
     wrap.is = predicate;
   }
-  return wrap as INewtype<any, CarrierOf<any>>;
-}
-
-export function guard<URI extends Newtypes.TypeURIS, T>(
-  URI: Newtypes.Guard<URI, T>["URI"],
-  guard: Newtypes.Guard<URI, T>["guard"],
-): <S extends Newtypes.Kind<URI, T>>() => IGuardNewType<URI, S, CarrierOf<S>> {
-  return F.unsafeCoerce(() => newtype(guard, URI + ""));
+  return wrap as INewtypeClass<any, CarrierOf<any>>;
 }
 
 /**
  * @since 0.2.0
  */
 export type Concat<
-  N1 extends Newtype<object, any>,
-  N2 extends Newtype<object, CarrierOf<N1>>,
-> = Newtype<URIOf<N1> & URIOf<N2>, CarrierOf<N1>>;
+  N1 extends INewtype<object, any>,
+  N2 extends INewtype<object, CarrierOf<N1>>,
+> = INewtype<URIOf<N1> & URIOf<N2>, CarrierOf<N1>>;
 
 /**
  * @since 0.2.0
  */
-export type Extends<N extends AnyNewtype, Tags extends object> = Newtype<
+export type Extends<N extends AnyNewtype, Tags extends object> = INewtype<
   Tags & URIOf<N>,
   CarrierOf<N>
 >;

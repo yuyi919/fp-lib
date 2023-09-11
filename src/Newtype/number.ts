@@ -22,6 +22,7 @@ export type IsInteger<
   T = true,
   F = false,
 > = `${N}` extends `${number}.${number}` ? F : T;
+
 export type CompareIsPositive<
   N extends [number, number],
   NRA = IsPositive<N[0]>,
@@ -66,14 +67,12 @@ declare global {
   }
 }
 
-export type Integer<T extends number = number> = newtype.Newtype<
-  { readonly Integer: unique symbol },
-  T
->;
+export type Integer<T extends number = number> = newtype.Newtype<"Integer", T>;
 export type Positive<T extends number = number> = newtype.Newtype<
-  { readonly Positive: unique symbol },
+  "Positive",
   T
 >;
+
 export type PositiveInteger<T extends number = number> = newtype.Concat<
   Integer<T>,
   Positive<T>
@@ -83,19 +82,19 @@ export type PositiveInteger<T extends number = number> = newtype.Concat<
  * @since 0.2.0
  */
 export const isInteger = (n: number) => Number.isInteger(n);
-export const integer = newtype.newtype(isInteger, "Integer");
+export const integer = newtype.define(isInteger, "Integer");
 
 /**
  * @since 0.2.0
  */
 export const isPositive = (n: number) => n > 0;
-export const positive = newtype.newtype(isPositive, "Positive");
+export const positive = newtype.define(isPositive, "Positive");
 
 /**
  * @since 0.2.0
  */
 export const isPositiveInteger = predicate.and(isPositive)(isInteger);
-export const positiveInteger = newtype.newtype(
+export const positiveInteger = newtype.define(
   isPositiveInteger,
   "PositiveInteger",
 );
@@ -105,3 +104,4 @@ export const assertPositive: AssertsT.AssertsId<Positive>["assert"] =
 // const foo: any = 1;
 // assertPositive(foo);
 // const b = foo;
+// positiveInteger.unwrap(integer(1))

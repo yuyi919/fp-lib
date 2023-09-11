@@ -12,7 +12,7 @@ namespace Newtypes {
 
   export type Kind<URI, A> = Extract<
     import("fp-ts/HKT").Kind<Extract<URI, TypeURIS>, A>,
-    import("./newtype").Newtype<{}, A>
+    import("./newtype").INewtype<{}, A>
   >;
 
   export type Guard<URI extends TypeURIS, T> = {
