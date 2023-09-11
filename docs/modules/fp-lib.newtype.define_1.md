@@ -1,5 +1,6 @@
 ---
 layout: default
+title: define
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,3 +26,4 @@ export declare function define<S extends AnyNewtype>(predicate: Predicate.Predic
 **Returns:**
 
 [INewtypeClass](./fp-lib.newtype.inewtypeclass.md)<!-- -->&lt;S, [CarrierOf](./fp-lib.newtype.carrierof.md)<!-- -->&lt;S&gt;&gt;
+

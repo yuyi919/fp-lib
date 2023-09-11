@@ -32,8 +32,8 @@ devDependencies:
     specifier: ^5.62.0
     version: 5.62.0(eslint@8.48.0)(typescript@5.2.2)
   '@yuyi919/api-documenter-jekyll':
-    specifier: ^0.0.1
-    version: 0.0.1(@types/node@20.5.9)
+    specifier: ^0.0.4
+    version: 0.0.4(@types/node@20.5.9)
   eslint:
     specifier: ^8.48.0
     version: 8.48.0
@@ -1252,8 +1252,8 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
-  /@yuyi919/api-documenter-jekyll@0.0.1(@types/node@20.5.9):
-    resolution: {integrity: sha512-An+7njitZRq5cmBiuSRc3BwujI/ACO9C8hwjCn5b+Zf1S4iU2MWTBZmw+tNEYHa3MmSSesLUgQT0IQqm7dPydw==}
+  /@yuyi919/api-documenter-jekyll@0.0.4(@types/node@20.5.9):
+    resolution: {integrity: sha512-USAGM3mRaAHSMTXVlynkWYT8DdBIRPvJuAVWpq4T3k2C6/wZhczbOMYiD52aDbzjL3gd3vowrlvgkSLV+U1VOA==}
     dependencies:
       '@microsoft/api-documenter': 7.22.33(@types/node@20.5.9)
       '@rushstack/node-core-library': 3.59.7(@types/node@20.5.9)

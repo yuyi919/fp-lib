@@ -1,5 +1,6 @@
 ---
 layout: default
+title: liftF11C
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -23,3 +24,4 @@ export interface liftF11C<URI extends HKT.URIS, T>
 |  [liftF2(f)](./fp-lib.liftf1c.liftf11c.liftf2.md) |  |
 |  [liftF3(f)](./fp-lib.liftf1c.liftf11c.liftf3.md) |  |
 |  [liftF4(f)](./fp-lib.liftf1c.liftf11c.liftf4.md) |  |
+

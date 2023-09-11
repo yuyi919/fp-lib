@@ -1,5 +1,6 @@
 ---
 layout: default
+title: AssertsId
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -15,3 +16,4 @@ improve_this_button: false
 export type AssertsId<T = any> = AssertsT1C<identity.URI, T>;
 ```
 **References:** [AssertsT1C](./fp-lib.assertst.assertst1c.md)
+

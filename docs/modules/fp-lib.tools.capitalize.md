@@ -1,5 +1,6 @@
 ---
 layout: default
+title: capitalize
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ export declare function capitalize<S extends string>(str: S): Capitalize<S>;
 **Returns:**
 
 Capitalize&lt;S&gt;
+

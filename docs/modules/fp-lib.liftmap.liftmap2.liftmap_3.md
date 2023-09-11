@@ -1,5 +1,6 @@
 ---
 layout: default
+title: liftMap
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -29,3 +30,4 @@ liftMap<I, A, B, C, D, E, F>(fa: Kind2<URI, I, A>, fb: Kind2<URI, I, B>, fc: Kin
 **Returns:**
 
 Kind2&lt;URI, I, F&gt;
+

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Reader
 navigation_source: api_nav
 improve_this_button: false
 ---

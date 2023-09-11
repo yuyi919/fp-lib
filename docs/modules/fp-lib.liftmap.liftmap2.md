@@ -1,5 +1,6 @@
 ---
 layout: default
+title: LiftMap2
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,3 +26,4 @@ export interface LiftMap2<URI extends URIS2> extends Functor.Functor2<URI>
 |  [liftMap(fa, fb, fc, fd, f)](./fp-lib.liftmap.liftmap2.liftmap_2.md) |  |
 |  [liftMap(fa, fb, fc, fd, fe, f)](./fp-lib.liftmap.liftmap2.liftmap_3.md) |  |
 |  [liftMap(fa, fb, fc, fd, fe, ff, f)](./fp-lib.liftmap.liftmap2.liftmap_4.md) |  |
+

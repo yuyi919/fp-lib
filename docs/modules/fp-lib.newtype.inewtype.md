@@ -1,5 +1,6 @@
 ---
 layout: default
+title: INewtype
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -22,3 +23,4 @@ export interface INewtype<URI, A>
 |  [\_A](./fp-lib.newtype.inewtype._a.md) | <code>readonly</code> | A |  |
 |  [\_URI](./fp-lib.newtype.inewtype._uri.md) | <code>readonly</code> | URI |  |
 |  [\[newtypeId\]](./fp-lib.newtype.inewtype._newtypeid_.md) | <code>readonly</code> | typeof [newtypeId](./fp-lib.newtype.newtypeid.md) |  |
+

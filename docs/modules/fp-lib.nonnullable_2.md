@@ -1,5 +1,6 @@
 ---
 layout: default
+title: NonNullable_2
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -15,3 +16,4 @@ improve_this_button: false
 |  --- | --- |
 |  [Asserts](./fp-lib.nonnullable_2.asserts.md) |  |
 |  [predicate](./fp-lib.nonnullable_2.predicate.md) |  |
+

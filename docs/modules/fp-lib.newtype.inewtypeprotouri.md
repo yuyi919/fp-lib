@@ -1,5 +1,6 @@
 ---
 layout: default
+title: INewtypeProtoURI
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,3 +26,4 @@ export interface INewtypeProtoURI<URI extends Newtypes.TypeURIS, S extends AnyNe
 |  [liftF2](./fp-lib.newtype.inewtypeprotouri.liftf2.md) |  | [liftF1C.liftF11C](./fp-lib.liftf1c.liftf11c.md)<!-- -->&lt;URI, T&gt;\["liftF2"\] |  |
 |  [liftF3](./fp-lib.newtype.inewtypeprotouri.liftf3.md) |  | [liftF1C.liftF11C](./fp-lib.liftf1c.liftf11c.md)<!-- -->&lt;URI, T&gt;\["liftF3"\] |  |
 |  [Monad](./fp-lib.newtype.inewtypeprotouri.monad.md) |  | Monad.Monad1&lt;URI&gt; |  |
+

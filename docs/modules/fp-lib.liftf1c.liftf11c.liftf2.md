@@ -1,5 +1,6 @@
 ---
 layout: default
+title: liftF2
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ liftF2<const A extends T, const B extends T, const C extends T>(f: (a: A, b: B) 
 **Returns:**
 
 (...args: [MSeq](./fp-lib.liftmap.mseq.md)<!-- -->&lt;URI, \[a: A, b: B\]&gt;) =&gt; HKT.Kind&lt;URI, C&gt;
+

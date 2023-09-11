@@ -1,5 +1,6 @@
 ---
 layout: default
+title: define
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ export declare function define<S extends AnyNewtype, A extends CarrierOf<S> = Ca
 **Returns:**
 
 [INewtypeClass](./fp-lib.newtype.inewtypeclass.md)<!-- -->&lt;S, A&gt;
+

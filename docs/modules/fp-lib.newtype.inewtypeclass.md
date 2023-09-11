@@ -1,5 +1,6 @@
 ---
 layout: default
+title: INewtypeClass
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,3 +26,4 @@ export interface INewtypeClass<S extends AnyNewtype, T extends CarrierOf<S>> ext
 |  [liftF2](./fp-lib.newtype.inewtypeclass.liftf2.md) |  | liftF1C.liftF1C&lt;[URIOf](./fp-lib.newtype.uriof.md)<!-- -->&lt;S&gt;, T&gt;\["liftF2"\] |  |
 |  [liftF3](./fp-lib.newtype.inewtypeclass.liftf3.md) |  | liftF1C.liftF1C&lt;[URIOf](./fp-lib.newtype.uriof.md)<!-- -->&lt;S&gt;, T&gt;\["liftF3"\] |  |
 |  [Monad](./fp-lib.newtype.inewtypeclass.monad.md) |  | Monad.Monad&lt;[URIOf](./fp-lib.newtype.uriof.md)<!-- -->&lt;S&gt;&gt; |  |
+

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: getAsserts
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ export declare function getAsserts<S extends AnyNewtype>(R: INewtypeProto<S, any
 **Returns:**
 
 [AssertsT.AssertsId](./fp-lib.assertst.assertsid.md)<!-- -->&lt;S&gt;
+

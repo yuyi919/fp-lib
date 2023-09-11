@@ -1,5 +1,6 @@
 ---
 layout: default
+title: AssertsT
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -36,3 +37,4 @@ improve_this_button: false
 |  [AssertsT2C](./fp-lib.assertst.assertst2c.md) |  |
 |  [AssertsT3](./fp-lib.assertst.assertst3.md) |  |
 |  [AssertsT3C](./fp-lib.assertst.assertst3c.md) |  |
+

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: liftF1
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ liftF1<A extends T, B extends T>(f: (a: A) => B): (a: HKT.Kind<URI, A>) => HKT.K
 **Returns:**
 
 (a: HKT.Kind&lt;URI, A&gt;) =&gt; HKT.Kind&lt;URI, B&gt;
+

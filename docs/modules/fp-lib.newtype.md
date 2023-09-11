@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Newtype
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -53,3 +54,4 @@ improve_this_button: false
 |  [Extends](./fp-lib.newtype.extends.md) |  |
 |  [Newtype](./fp-lib.newtype.newtype.md) |  |
 |  [URIOf](./fp-lib.newtype.uriof.md) |  |
+

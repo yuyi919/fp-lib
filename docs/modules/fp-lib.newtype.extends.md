@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Extends
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -15,3 +16,4 @@ improve_this_button: false
 export type Extends<N extends AnyNewtype, Tags extends object> = INewtype<Tags & URIOf<N>, CarrierOf<N>>;
 ```
 **References:** [AnyNewtype](./fp-lib.newtype.anynewtype.md)<!-- -->, [INewtype](./fp-lib.newtype.inewtype.md)<!-- -->, [URIOf](./fp-lib.newtype.uriof.md)<!-- -->, [CarrierOf](./fp-lib.newtype.carrierof.md)
+

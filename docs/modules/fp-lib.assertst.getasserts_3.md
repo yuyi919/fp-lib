@@ -1,5 +1,6 @@
 ---
 layout: default
+title: getAsserts
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,3 +26,4 @@ export declare function getAsserts<M extends URIS, A>(isMatched: Predicate<A>, U
 **Returns:**
 
 [AssertsT1C](./fp-lib.assertst.assertst1c.md)<!-- -->&lt;M, A&gt;
+

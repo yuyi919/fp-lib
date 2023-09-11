@@ -1,5 +1,6 @@
 ---
 layout: default
+title: unwrap
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ unwrap(a: S): T;
 **Returns:**
 
 T
+

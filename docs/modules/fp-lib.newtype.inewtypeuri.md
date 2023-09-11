@@ -1,5 +1,6 @@
 ---
 layout: default
+title: INewtypeURI
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -15,3 +16,4 @@ improve_this_button: false
 export interface INewtypeURI<URI extends Newtypes.TypeURIS, S extends AnyNewtype, T extends CarrierOf<S>> extends INewtypeProtoURI<URI, S, T> 
 ```
 **Extends:** [INewtypeProtoURI](./fp-lib.newtype.inewtypeprotouri.md)<!-- -->&lt;URI, S, T&gt;
+

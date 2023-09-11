@@ -1,5 +1,6 @@
 ---
 layout: default
+title: getAsserts
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -25,3 +26,4 @@ export declare function getAsserts<A>(isMatched: Predicate<A>, msg?: string): As
 **Returns:**
 
 [AssertsId](./fp-lib.assertst.assertsid.md)<!-- -->&lt;A&gt;
+

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: @yuyi919/fp-lib
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -19,3 +20,4 @@ improve_this_button: false
 |  [Newtype](./fp-lib.newtype.md) |  |
 |  [NonNullable\_2](./fp-lib.nonnullable_2.md) |  |
 |  [tools](./fp-lib.tools.md) |  |
+

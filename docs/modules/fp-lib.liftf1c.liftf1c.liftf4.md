@@ -1,5 +1,6 @@
 ---
 layout: default
+title: liftF4
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -24,3 +25,4 @@ liftF4<A extends T, B extends T, C extends T, D extends T, E extends T>(f: (a: A
 **Returns:**
 
 (a: HKT.HKT&lt;URI, A&gt;, b: HKT.HKT&lt;URI, B&gt;, c: HKT.HKT&lt;URI, C&gt;, d: HKT.HKT&lt;URI, D&gt;) =&gt; HKT.HKT&lt;URI, E&gt;
+

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: LiftMap
 navigation_source: api_nav
 improve_this_button: false
 ---
@@ -32,3 +33,4 @@ improve_this_button: false
 |  [LiftMapT22](./fp-lib.liftmap.liftmapt22.md) |  |
 |  [MSeq](./fp-lib.liftmap.mseq.md) |  |
 |  [MSeq2](./fp-lib.liftmap.mseq2.md) |  |
+
