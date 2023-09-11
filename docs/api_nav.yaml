@@ -1,0 +1,225 @@
+api_nav:
+  - title: API Reference
+    url: /pages/api/
+  - title: '@yuyi919/fp-lib'
+    url: /pages/api/fp-lib
+    subitems:
+      - title: AssertsT
+        url: /pages/api/fp-lib.assertst
+        subitems:
+          - title: AssertError
+            url: /pages/api/fp-lib.assertst.asserterror
+            subitems:
+              - title: (constructor)
+                url: /pages/api/fp-lib.assertst.asserterror._constructor_
+          - title: AssertsId
+            url: /pages/api/fp-lib.assertst.assertsid
+          - title: AssertsT
+            url: /pages/api/fp-lib.assertst.assertst
+          - title: AssertsT1C
+            url: /pages/api/fp-lib.assertst.assertst1c
+          - title: AssertsT2
+            url: /pages/api/fp-lib.assertst.assertst2
+          - title: AssertsT2C
+            url: /pages/api/fp-lib.assertst.assertst2c
+          - title: AssertsT3
+            url: /pages/api/fp-lib.assertst.assertst3
+          - title: AssertsT3C
+            url: /pages/api/fp-lib.assertst.assertst3c
+          - title: getAsserts
+            url: /pages/api/fp-lib.assertst.getasserts
+          - title: getAsserts
+            url: /pages/api/fp-lib.assertst.getasserts_1
+          - title: getAsserts
+            url: /pages/api/fp-lib.assertst.getasserts_2
+          - title: getAsserts
+            url: /pages/api/fp-lib.assertst.getasserts_3
+          - title: getAsserts
+            url: /pages/api/fp-lib.assertst.getasserts_4
+      - title: liftF1C
+        url: /pages/api/fp-lib.liftf1c
+        subitems:
+          - title: getPrediates
+            url: /pages/api/fp-lib.liftf1c.getprediates
+          - title: Id
+            url: /pages/api/fp-lib.liftf1c.id
+          - title: Id
+            url: /pages/api/fp-lib.liftf1c.id
+          - title: liftF11C
+            url: /pages/api/fp-lib.liftf1c.liftf11c
+            subitems:
+              - title: liftF1
+                url: /pages/api/fp-lib.liftf1c.liftf11c.liftf1
+              - title: liftF2
+                url: /pages/api/fp-lib.liftf1c.liftf11c.liftf2
+              - title: liftF3
+                url: /pages/api/fp-lib.liftf1c.liftf11c.liftf3
+              - title: liftF4
+                url: /pages/api/fp-lib.liftf1c.liftf11c.liftf4
+          - title: liftF1C
+            url: /pages/api/fp-lib.liftf1c.liftf1c
+            subitems:
+              - title: liftF1
+                url: /pages/api/fp-lib.liftf1c.liftf1c.liftf1
+              - title: liftF2
+                url: /pages/api/fp-lib.liftf1c.liftf1c.liftf2
+              - title: liftF3
+                url: /pages/api/fp-lib.liftf1c.liftf1c.liftf3
+              - title: liftF4
+                url: /pages/api/fp-lib.liftf1c.liftf1c.liftf4
+      - title: LiftMap
+        url: /pages/api/fp-lib.liftmap
+        subitems:
+          - title: Identity
+            url: /pages/api/fp-lib.liftmap.identity
+          - title: IO
+            url: /pages/api/fp-lib.liftmap.io
+          - title: LiftMap1
+            url: /pages/api/fp-lib.liftmap.liftmap1
+            subitems:
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap1.liftmap
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap1.liftmap_1
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap1.liftmap_2
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap1.liftmap_3
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap1.liftmap_4
+          - title: LiftMap2
+            url: /pages/api/fp-lib.liftmap.liftmap2
+            subitems:
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap2.liftmap
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap2.liftmap_1
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap2.liftmap_2
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap2.liftmap_3
+              - title: liftMap
+                url: /pages/api/fp-lib.liftmap.liftmap2.liftmap_4
+          - title: LiftMapT21
+            url: /pages/api/fp-lib.liftmap.liftmapt21
+          - title: LiftMapT22
+            url: /pages/api/fp-lib.liftmap.liftmapt22
+          - title: MSeq
+            url: /pages/api/fp-lib.liftmap.mseq
+          - title: MSeq2
+            url: /pages/api/fp-lib.liftmap.mseq2
+          - title: Reader
+            url: /pages/api/fp-lib.liftmap.reader
+      - title: Newtype
+        url: /pages/api/fp-lib.newtype
+        subitems:
+          - title: AnyNewtype
+            url: /pages/api/fp-lib.newtype.anynewtype
+          - title: CarrierOf
+            url: /pages/api/fp-lib.newtype.carrierof
+          - title: Concat
+            url: /pages/api/fp-lib.newtype.concat
+          - title: define
+            url: /pages/api/fp-lib.newtype.define
+          - title: define
+            url: /pages/api/fp-lib.newtype.define_1
+          - title: define
+            url: /pages/api/fp-lib.newtype.define_2
+          - title: Extends
+            url: /pages/api/fp-lib.newtype.extends
+          - title: getAsserts
+            url: /pages/api/fp-lib.newtype.getasserts
+          - title: getEq
+            url: /pages/api/fp-lib.newtype.geteq
+          - title: getField
+            url: /pages/api/fp-lib.newtype.getfield
+          - title: getFunctor
+            url: /pages/api/fp-lib.newtype.getfunctor
+          - title: getMonoid
+            url: /pages/api/fp-lib.newtype.getmonoid
+          - title: getOrd
+            url: /pages/api/fp-lib.newtype.getord
+          - title: getRing
+            url: /pages/api/fp-lib.newtype.getring
+          - title: getSemigroup
+            url: /pages/api/fp-lib.newtype.getsemigroup
+          - title: getSemiring
+            url: /pages/api/fp-lib.newtype.getsemiring
+          - title: IGuardNewType
+            url: /pages/api/fp-lib.newtype.iguardnewtype
+          - title: INewtype
+            url: /pages/api/fp-lib.newtype.inewtype
+            subitems:
+              - title: _A
+                url: /pages/api/fp-lib.newtype.inewtype._a
+              - title: _URI
+                url: /pages/api/fp-lib.newtype.inewtype._uri
+              - title: '[newtypeId]'
+                url: /pages/api/fp-lib.newtype.inewtype._newtypeid_
+          - title: INewtypeClass
+            url: /pages/api/fp-lib.newtype.inewtypeclass
+            subitems:
+              - title: lift
+                url: /pages/api/fp-lib.newtype.inewtypeclass.lift
+              - title: liftF1
+                url: /pages/api/fp-lib.newtype.inewtypeclass.liftf1
+              - title: liftF2
+                url: /pages/api/fp-lib.newtype.inewtypeclass.liftf2
+              - title: liftF3
+                url: /pages/api/fp-lib.newtype.inewtypeclass.liftf3
+              - title: Monad
+                url: /pages/api/fp-lib.newtype.inewtypeclass.monad
+          - title: INewtypeProto
+            url: /pages/api/fp-lib.newtype.inewtypeproto
+            subitems:
+              - title: is
+                url: /pages/api/fp-lib.newtype.inewtypeproto.is
+              - title: msg
+                url: /pages/api/fp-lib.newtype.inewtypeproto.msg
+              - title: predicate
+                url: /pages/api/fp-lib.newtype.inewtypeproto.predicate
+              - title: unsafe
+                url: /pages/api/fp-lib.newtype.inewtypeproto.unsafe
+              - title: unwrap
+                url: /pages/api/fp-lib.newtype.inewtypeproto.unwrap
+          - title: INewtypeProtoURI
+            url: /pages/api/fp-lib.newtype.inewtypeprotouri
+            subitems:
+              - title: lift
+                url: /pages/api/fp-lib.newtype.inewtypeprotouri.lift
+              - title: liftF1
+                url: /pages/api/fp-lib.newtype.inewtypeprotouri.liftf1
+              - title: liftF2
+                url: /pages/api/fp-lib.newtype.inewtypeprotouri.liftf2
+              - title: liftF3
+                url: /pages/api/fp-lib.newtype.inewtypeprotouri.liftf3
+              - title: Monad
+                url: /pages/api/fp-lib.newtype.inewtypeprotouri.monad
+          - title: INewtypeURI
+            url: /pages/api/fp-lib.newtype.inewtypeuri
+          - title: Newtype
+            url: /pages/api/fp-lib.newtype.newtype
+          - title: newtypeId
+            url: /pages/api/fp-lib.newtype.newtypeid
+          - title: URIOf
+            url: /pages/api/fp-lib.newtype.uriof
+      - title: NonNullable_2
+        url: /pages/api/fp-lib.nonnullable_2
+        subitems:
+          - title: Asserts
+            url: /pages/api/fp-lib.nonnullable_2.asserts
+          - title: predicate
+            url: /pages/api/fp-lib.nonnullable_2.predicate
+      - title: tools
+        url: /pages/api/fp-lib.tools
+        subitems:
+          - title: capitalize
+            url: /pages/api/fp-lib.tools.capitalize
+          - title: return1
+            url: /pages/api/fp-lib.tools.return1
+          - title: return2
+            url: /pages/api/fp-lib.tools.return2
+          - title: return3
+            url: /pages/api/fp-lib.tools.return3
+          - title: return4
+            url: /pages/api/fp-lib.tools.return4

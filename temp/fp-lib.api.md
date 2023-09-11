@@ -4,20 +4,33 @@
 
 ```ts
 
+import * as Eq from 'fp-ts/Eq';
+import { Field } from 'fp-ts/Field';
 import * as Functor from 'fp-ts/Functor';
 import * as HKT from 'fp-ts/HKT';
-import { identity } from 'fp-ts/function';
-import * as identity_2 from 'fp-ts/Identity';
+import * as identity from 'fp-ts/Identity';
+import { identity as identity_2 } from 'fp-ts/function';
 import { Kind } from 'fp-ts/HKT';
 import { Kind2 } from 'fp-ts/HKT';
 import { Kind3 } from 'fp-ts/HKT';
 import * as MIO from 'fp-ts/IO';
+import * as Monad from 'fp-ts/Monad';
+import { Monoid } from 'fp-ts/Monoid';
 import * as MR from 'fp-ts/Reader';
+import * as Ord from 'fp-ts/Ord';
 import { Predicate } from 'fp-ts/Predicate';
+import * as Predicate_2 from 'fp-ts/Predicate';
+import * as R from 'fp-ts/Refinement';
 import { Refinement } from 'fp-ts/Refinement';
+import * as Ring from 'fp-ts/Ring';
+import * as Semigroup from 'fp-ts/Semigroup';
+import * as Semiring from 'fp-ts/Semiring';
 import { URIS } from 'fp-ts/HKT';
 import { URIS2 } from 'fp-ts/HKT';
 import { URIS3 } from 'fp-ts/HKT';
+
+// @public (undocumented)
+type AnyNewtype = INewtype<any, any>;
 
 // @public (undocumented)
 class AssertError extends Error {
@@ -28,7 +41,7 @@ class AssertError extends Error {
 const Asserts: AssertsT.AssertsT<"NonNullable">;
 
 // @public (undocumented)
-type AssertsId<T = any> = AssertsT1C<identity_2.URI, T>;
+type AssertsId<T = any> = AssertsT1C<identity.URI, T>;
 
 declare namespace AssertsT {
     export {
@@ -75,7 +88,7 @@ type AssertsT3C<URI extends URIS3, T, T2, T3> = {
     expect<A extends T, B extends T2, C extends T3>(value: unknown, isMatched: boolean, msg?: string): asserts value is Kind3<URI, A, B, C>;
 };
 
-// @public
+// @public (undocumented)
 type AssertsT_2<URI extends URIS> = {
     assert<A>(a: unknown, msg?: string): asserts a is Kind<URI, A>;
     expect<A>(value: any, isMatched: boolean, msg?: string): asserts value is Kind<URI, A>;
@@ -83,6 +96,24 @@ type AssertsT_2<URI extends URIS> = {
 
 // @public (undocumented)
 function capitalize<S extends string>(str: S): Capitalize<S>;
+
+// @public (undocumented)
+type CarrierOf<N extends AnyNewtype> = N extends INewtype<any, infer A> ? A : never;
+
+// @public (undocumented)
+type Concat<N1 extends INewtype<object, any>, N2 extends INewtype<object, CarrierOf<N1>>> = INewtype<URIOf<N1> & URIOf<N2>, CarrierOf<N1>>;
+
+// @public (undocumented)
+function define<URI extends Newtypes.TypeURIS, T>(guard: Newtypes.Guard<URI, T>["guard"], URI: Newtypes.Guard<URI, T>["URI"]): INewtypeURI<URI, Newtypes.Kind<URI, T>, CarrierOf<Newtypes.Kind<URI, T>>>;
+
+// @public (undocumented)
+function define<S extends AnyNewtype>(predicate: Predicate_2.Predicate<CarrierOf<S>>, message?: string): INewtypeClass<S, CarrierOf<S>>;
+
+// @public (undocumented)
+function define<S extends AnyNewtype, A extends CarrierOf<S> = CarrierOf<S>>(predicate?: Predicate_2.Predicate<A>): INewtypeClass<S, A>;
+
+// @public (undocumented)
+type Extends<N extends AnyNewtype, Tags extends object> = INewtype<Tags & URIOf<N>, CarrierOf<N>>;
 
 // @public (undocumented)
 function getAsserts<M extends URIS3, A>(isMatched: Predicate<A>, URI: M): AssertsT3<M>;
@@ -100,13 +131,113 @@ function getAsserts<M extends URIS, A>(isMatched: Predicate<A>, URI: M): Asserts
 function getAsserts<A>(isMatched: Predicate<A>, msg?: string): AssertsId<A>;
 
 // @public (undocumented)
-type Id = liftF11C<identity_2.URI, any>;
+function getAsserts_2<S extends AnyNewtype>(R: INewtypeProto<S, any>): AssertsT.AssertsId<S>;
+
+// @public (undocumented)
+const getEq: <S extends AnyNewtype>(S: Eq.Eq<CarrierOf<S>>) => Eq.Eq<S>;
+
+// @public (undocumented)
+const getField: <S extends AnyNewtype>(F: Field<CarrierOf<S>>) => Field<S>;
+
+// @public (undocumented)
+const getFunctor: <S extends AnyNewtype>(S: Functor.Functor<CarrierOf<S>>) => Functor.Functor<S>;
+
+// @public (undocumented)
+const getMonoid: <S extends AnyNewtype>(M: Monoid<CarrierOf<S>>) => Monoid<S>;
+
+// @public (undocumented)
+const getOrd: <S extends AnyNewtype>(O: Ord.Ord<CarrierOf<S>>) => Ord.Ord<S>;
+
+// @public (undocumented)
+const getPrediates: Id;
+
+// @public (undocumented)
+const getRing: <S extends AnyNewtype>(R: Ring.Ring<CarrierOf<S>>) => Ring.Ring<S>;
+
+// @public (undocumented)
+const getSemigroup: <S extends AnyNewtype>(S: Semigroup.Semigroup<CarrierOf<S>>) => Semigroup.Semigroup<S>;
+
+// @public (undocumented)
+const getSemiring: <S extends AnyNewtype>(S: Semiring.Semiring<CarrierOf<S>>) => Semiring.Semiring<S>;
+
+// @public (undocumented)
+type Id = liftF11C<identity.URI, any>;
 
 // @public (undocumented)
 const Id: Id;
 
 // @public (undocumented)
-const Identity: LiftMap1<identity_2.URI>;
+const Identity: LiftMap1<identity.URI>;
+
+// @public (undocumented)
+interface IGuardNewType<URI extends Newtypes.TypeURIS, S extends AnyNewtype, T extends CarrierOf<S>> extends INewtypeProtoURI<URI, S, T> {
+    // (undocumented)
+    <const A extends T>(input: A, unsafeCoerce: true): Newtypes.GuardResult<URI, A>;
+    // (undocumented)
+    <A extends T>(a: Newtypes.InputGuard<URI, A>, unsafeCoerce?: false): Newtypes.GuardResult<URI, A>;
+}
+
+// @public (undocumented)
+interface INewtype<URI, A> {
+    // (undocumented)
+    readonly [newtypeId]: typeof newtypeId;
+    // (undocumented)
+    readonly _A: A;
+    // (undocumented)
+    readonly _URI: URI;
+}
+
+// @public (undocumented)
+interface INewtypeClass<S extends AnyNewtype, T extends CarrierOf<S>> extends INewtypeProto<S, T> {
+    // (undocumented)
+    (input: T, unsafeCoerce?: boolean): S;
+    // (undocumented)
+    lift: Functor.Functor<URIOf<S>>["map"];
+    // (undocumented)
+    liftF1: liftF1C.liftF1C<URIOf<S>, T>["liftF1"];
+    // (undocumented)
+    liftF2: liftF1C.liftF1C<URIOf<S>, T>["liftF2"];
+    // (undocumented)
+    liftF3: liftF1C.liftF1C<URIOf<S>, T>["liftF3"];
+    // (undocumented)
+    Monad: Monad.Monad<URIOf<S>>;
+}
+
+// @public (undocumented)
+interface INewtypeProto<S extends AnyNewtype, T extends CarrierOf<S>> {
+    // (undocumented)
+    is: R.Refinement<any, S>;
+    // (undocumented)
+    msg: string;
+    // (undocumented)
+    predicate: Predicate_2.Predicate<CarrierOf<S>>;
+    // (undocumented)
+    unsafe(a: T): S;
+    // (undocumented)
+    unwrap(a: S): T;
+}
+
+// @public (undocumented)
+interface INewtypeProtoURI<URI extends Newtypes.TypeURIS, S extends AnyNewtype, T extends CarrierOf<S>> extends INewtypeProto<S, T> {
+    // (undocumented)
+    lift: Functor.Functor1<URI>["map"];
+    // (undocumented)
+    liftF1: liftF1C.liftF11C<URI, T>["liftF1"];
+    // (undocumented)
+    liftF2: liftF1C.liftF11C<URI, T>["liftF2"];
+    // (undocumented)
+    liftF3: liftF1C.liftF11C<URI, T>["liftF3"];
+    // (undocumented)
+    Monad: Monad.Monad1<URI>;
+}
+
+// @public (undocumented)
+interface INewtypeURI<URI extends Newtypes.TypeURIS, S extends AnyNewtype, T extends CarrierOf<S>> extends INewtypeProtoURI<URI, S, T> {
+    // (undocumented)
+    <const A extends T>(a: Newtypes.InputGuard<URI, A>, unsafeCoerce?: false): Newtypes.Kind<URI, A>;
+    // (undocumented)
+    <const A extends T>(input: A, unsafeCoerce: true): Newtypes.Kind<URI, A>;
+}
 
 // @public (undocumented)
 const IO: LiftMap1<MIO.URI>;
@@ -127,7 +258,8 @@ declare namespace liftF1C {
     export {
         liftF1C_2 as liftF1C,
         liftF11C,
-        Id
+        Id,
+        getPrediates
     }
 }
 export { liftF1C }
@@ -215,6 +347,43 @@ type MSeq2<MF extends URIS2, E, Args extends any[]> = {
     [Index in keyof Args]: Kind2<MF, E, Args[Index]>;
 };
 
+declare namespace Newtype {
+    export {
+        getAsserts_2 as getAsserts,
+        define,
+        newtypeId,
+        INewtype,
+        Newtype_2 as Newtype,
+        AnyNewtype,
+        URIOf,
+        CarrierOf,
+        getEq,
+        getFunctor,
+        getOrd,
+        getSemigroup,
+        getMonoid,
+        getSemiring,
+        getRing,
+        getField,
+        INewtypeProto,
+        INewtypeClass,
+        INewtypeProtoURI,
+        INewtypeURI,
+        IGuardNewType,
+        Concat,
+        Extends
+    }
+}
+export { Newtype }
+
+// @public (undocumented)
+type Newtype_2<URI extends string, A = any> = INewtype<{
+    readonly [K in URI]: K;
+}, A>;
+
+// @public (undocumented)
+const newtypeId: unique symbol;
+
 declare namespace NonNullable_2 {
     export {
         predicate,
@@ -230,7 +399,7 @@ const predicate: <T>(a: T) => a is NonNullable<T>;
 const Reader: LiftMap2<MR.URI>;
 
 // @public (undocumented)
-const return1: typeof identity;
+const return1: typeof identity_2;
 
 // @public (undocumented)
 const return2: <B>(_a: any, b: B) => B;
@@ -251,6 +420,9 @@ declare namespace tools {
     }
 }
 export { tools }
+
+// @public (undocumented)
+type URIOf<N extends AnyNewtype> = N extends INewtype<infer URI, any> ? URI : never;
 
 // (No @packageDocumentation comment for this package)
 

@@ -38,7 +38,8 @@
     "fix-dts": "ts-node --skipProject ./scripts/fix-dts.ts",
     "test": "vitest",
     "test:dev": "vitest --watch",
-    "doc": "api-documenter markdown -i ./temp -o ./docs/modules"
+    "api": "pnpm fix-dts && pnpm api-extractor run",
+    "doc": "api-documenter generate -i ./temp -o ./docs/modules"
   },
   "husky": {
     "hooks": {
@@ -64,6 +65,7 @@
     "@types/node": "^20.5.9",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "@yuyi919/api-documenter-jekyll": "^0.0.1",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^8.10.0",
     "husky": "^8.0.3",

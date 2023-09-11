@@ -125,6 +125,14 @@
         {
           "tagName": "@preapproved",
           "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@since",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@category",
+          "syntaxKind": "block"
         }
       ],
       "supportForTags": {
@@ -155,7 +163,9 @@
         "@virtual": true,
         "@betaDocumentation": true,
         "@internalRemarks": true,
-        "@preapproved": true
+        "@preapproved": true,
+        "@since": true,
+        "@category": true
       },
       "reportUnsupportedHtmlElements": false
     }
@@ -310,7 +320,7 @@
             {
               "kind": "TypeAlias",
               "canonicalReference": "@yuyi919/fp-lib!AssertsT.AssertsT:type",
-              "docComment": "/**\n * @category model  @since 1.0.0\n */\n",
+              "docComment": "/**\n * @category\n *\n * model\n *\n * @since\n *\n * 1.0.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6131,7 +6141,7 @@
             {
               "kind": "TypeAlias",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.AnyNewtype:type",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6162,7 +6172,7 @@
             {
               "kind": "TypeAlias",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.CarrierOf:type",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6219,7 +6229,7 @@
             {
               "kind": "TypeAlias",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.Concat:type",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6336,7 +6346,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.define:function(1)",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6697,7 +6707,7 @@
             {
               "kind": "TypeAlias",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.Extends:type",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6787,7 +6797,7 @@
             {
               "kind": "Function",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getAsserts:function(1)",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6864,7 +6874,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getEq:var",
-              "docComment": "/**\n * @since 0.3.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.3.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6923,7 +6933,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getField:var",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -6982,7 +6992,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getFunctor:var",
-              "docComment": "/**\n * @since 0.3.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.3.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7041,7 +7051,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getMonoid:var",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7100,7 +7110,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getOrd:var",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7159,7 +7169,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getRing:var",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7218,7 +7228,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getSemigroup:var",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7277,7 +7287,7 @@
             {
               "kind": "Variable",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.getSemiring:var",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -7613,7 +7623,7 @@
             {
               "kind": "Interface",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.INewtype:interface",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -8983,7 +8993,7 @@
             {
               "kind": "TypeAlias",
               "canonicalReference": "@yuyi919/fp-lib!Newtype.URIOf:type",
-              "docComment": "/**\n * @since 0.2.0\n */\n",
+              "docComment": "/**\n * @since\n *\n * 0.2.0\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

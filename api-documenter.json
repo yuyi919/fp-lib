@@ -1,0 +1,9 @@
+{
+  "outputTarget": "markdown",
+  "plugins": [
+    {
+      "packageName": "@yuyi919/api-documenter-jekyll",
+      "enabledFeatureNames": ["rush-stack-markdown-documenter"]
+    }
+  ]
+}
